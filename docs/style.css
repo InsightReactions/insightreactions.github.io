@@ -267,6 +267,7 @@
   font-weight: 500; }
 
 .mat-card-title {
+  padding-bottom: 12px;
   font-size: 24px;
   font-weight: 500; }
 
@@ -1187,6 +1188,7 @@ body {
   line-height: 48px; }
 
 .mat-card {
+  padding: 24px;
   background: #242429;
   color: white; }
   .mat-card:not([class*='mat-elevation-z']) {
@@ -2303,4 +2305,53 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
     @media (max-height: 800px) {
         height: fit-content;
     }
+}
+
+.header-link {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 6px;
+}
+
+.header-link:hover {
+  color: #006fee;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--ir-inputText-hover-color);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.footer-link:hover {
+  color: #006fee;
+}
+
+.card-frame {
+  border: 1px solid var(--ir-border-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+/* Unvisited link */
+a:link {
+  color: #ffffff;
+}
+/* Visited link */
+a:visited {
+  color: #ccc;
+}
+/* Mouse over link */
+a:hover {
+  color: #006fee;
+}
+/* Selected link (active) */
+a:active {
+  color: #006fee;
 }

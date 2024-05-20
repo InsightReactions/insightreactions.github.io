@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>InsightReactions</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta charset="UTF-8" />
+    <title>InsightReactions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -15,24 +15,37 @@
 </head>
 
 <body class="mat-app-background mat-body" style="padding: 12px;">
-    <h1 class="mat-h1" style="font-size: xxx-large; font-weight: bold;">
-        Insight<span style="color: var(--ir-primary-color)">Reactions</span>
-    </h1>
-    <div style="height: 500px"></div>
-    <p style="font-size: x-large; text-align: center;">
-        Website under construction
-    </p>
+    <div style="display: flex; justify-content: center; border-bottom: 1px solid var(--ir-border-color); padding-bottom: 12px;">
+        <img src="logo-sm-insightreactions.svg" alt="InsightReactions Compressed Logo"
+            style="height: 24px; margin-left: 24px; margin-right: 24px;" />
+        <img src="logo-insightreactions.svg" alt="InsightReactions Logo" style="height: 24px; margin-top: 3px; margin-right: 5%" />
+        <a class="header-link" href="index.html" style="padding-left: 2%;">News</a>
+        <div style="border: 0; border-right: 1px solid var(--ir-border-color); margin-left: 2%; margin-right: 2%;"></div>
+        <a class="header-link" href="about.html" style="padding-right: 30%;">Company</a>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; padding: 2%;">
+        <div class="card-frame">
+            <img src="logo_render_tinyllama.png" style="height: 240px;"/>
+            <div class="mat-card click-card" style="width: 100%">
+                <a href="https://tinyllama.insightreactions.com" class="mat-card-title">Introducing Tiny Llama: Bringing Generative AI to the Privacy of the Home</a>
+                <p></p>
+                <p>Get ready to experience the future of home work and play with Tiny Llama, our innovative and effortless solution for at-home AI deployment!</p>
+                <p>Harness the power of Stable Diffusion Image Generation and robust LLM chat interface for breathtaking image quality and intelligent conversations. Plus, unlock new creative possibilities with LLM-image interoperability. And with the full open-source license, you're in control.</p>
+                <p>Click the link above to learn more about Tiny Llama and discover how you can seamlessly deploy AI to your own home network at no cost or purchase an effortless pre-configured plug-and-play AI Home Server with a premium feel.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
-<footer style="position: absolute; bottom: 0; padding: 12px; display: flex; gap: 12px;">
-    <div>
-        InsightReactions LLC.
-    </div>
-    <hr style="border: 0; border-right: 1px solid var(--ir-border-color); height: 10px;"/>
-    <div>
-        2117 W Platinum Dr.
-        West Jordan
-        Utah 84084
-    </div>
+<footer class="mat-app-background"
+    style="position: absolute; bottom: 0; left:12px; right:12px; padding: 12px; display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--ir-border-color); font-weight: 500;">
+    &copy; InsightReactions LLC. All rights reserved.
+    <hr style="border: 0; border-right: 0px solid var(--ir-border-color);" />
+    <span>
+        <img src="x-logo.svg" style="height: 10px;" alt="X Logo" />
+        <a class="footer-link" href="https://twitter.com/insightreact" style="margin-left: 0px;">@InsightReact</a>
+    </span>
+    <a class="footer-link" href="mailto:support@insightreactions.com">support@insightreactions.com</a>
 </footer>
+
 </html>
