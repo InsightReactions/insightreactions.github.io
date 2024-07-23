@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>t&cs.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><strong>TERMS AND CONDITIONS OF USE</strong></p>
+<p><strong>1. INTRODUCTION</strong></p>
+<p>This Terms and Conditions of Use (&quot;Agreement&quot;) governs the use of Tiny Llama, an open-source AI Home Server plugin platform developed by InsightReactions (&quot;We&quot; or &quot;Us&quot;). By using Tiny Llama, you agree to be bound by these terms.</p>
+<p><strong>2. DEFINITIONS</strong></p>
+<ul>
+<li>&quot;Software&quot; means the software, firmware, operating systems, and any other digital content provided with or used in conjunction with Tiny Llama.</li>
+<li>&quot;User&quot; means an individual who uses Tiny Llama for personal or business purposes.</li>
+<li>&quot;Update&quot; means a modification or patch to the Software that improves its performance, functionality, or security.</li>
+<li>&quot;AI Plugin&quot; means any software or code developed by third-party developers and integrated into Tiny Llama to provide additional features or services.</li>
+</ul>
+<p><strong>3. OWNERSHIP AND LICENSE</strong></p>
+<p>The Software is open-source, and by using Tiny Llama, you are granted a limited license to modify, distribute, and create derivative works based on the Software, subject to the terms of the applicable open-source license.</p>
+<p><strong>4. SOFTWARE UPDATES</strong></p>
+<p>We deliver updates for the Software automatically, but require your manual confirmation before installation. By clicking &quot;update&quot;, you confirm that you wish to receive and install the system update from InsightReactions.</p>
+<p>While we strive for a seamless updating experience, please note that remote updates may temporarily impact device usability. In such cases, technical assistance may be necessary to restore normal functionality.</p>
+<p><strong>5. HANDLING FAILED SOFTWARE UPDATES</strong></p>
+<p>If an update fails, please save the error log and email it to support@insightreactions.com, along with your stated hardware platform (Genuine Tiny Llama AI Home Server, or other). Our team will provide guidance on troubleshooting and do our best to resolve the issue.</p>
+<p>For users of unaltered and unmodified Tiny Llama AI Home Servers, if the software update procedure is determined to be at fault and cannot be resolved remotely, we offer a complementary repair service upon request (shipping costs may apply).</p>
+<p>For users that are not utilizing a Genuine Tiny Llama AI Home Server, the usage of the Tiny Llama software and features contained therein is <strong>at your own risk</strong>.</p>
+<p><strong>6. USER DATA COLLECTION AND USE</strong></p>
+<p>Tiny Llama does not collect user data but may host third-party AI Plugins that do. Before installing and using any AI Plugin from the Tiny Llama Plugin Marketplace, please consult each respective privacy policy to understand how each AI Plugin handles your data.</p>
+<p><strong>7. WARRANTY AND SUPPORT</strong></p>
+<p>Tiny Llama provides its products &quot;AS IS&quot; without warranty, except as specified below.</p>
+<p>For purchases of our AI Home Server, we offer a 30-day money-back guarantee, allowing you to evaluate the product risk-free. Additionally, component manufacturers may provide limited hardware warranties for certain components. Upon request, we will provide detailed information on individual warranty terms and limited repair services available to support your Tiny Llama AI Home Server.</p>
+<p>You are responsible for ensuring that our products meet your specific needs and are compatible with your systems, devices, and infrastructure before making a purchase.</p>
+<p><strong>8. LIABILITY AND INDEMNIFICATION</strong></p>
+<ul>
+<li><strong>Limited Liability (Tiny Llama AI Home Server)</strong>: We will not be liable for damages arising from the use of the Tiny Llama AI Home Server, except in cases where we have acted with gross negligence or intentional misconduct.</li>
+<li><strong>Indemnification (Tiny Llama Software)</strong>: You agree to indemnify us against any claims, damages, or expenses arising from your use of the Tiny Llama Software, provided that such claims, damages, or expenses arise solely out of your use of the Software and not out of your use of the Tiny Llama AI Home Server.</li>
+</ul>
+<p><strong>9. GOVERNING LAW AND JURISDICTION</strong></p>
+<p>This Agreement will be governed by and construed in accordance with the laws of the State of Utah, United States of America, without giving effect to any principles of conflicts of law. Any disputes arising from this Agreement will be resolved through arbitration in Salt Lake City, Utah, as further described below.</p>
+<p><strong>10. CHANGES TO THE AGREEMENT</strong></p>
+<p>We may modify this Agreement from time to time, and your continued use of Tiny Llama after being notified of a change constitutes acceptance of the revised terms.</p>
+<p><strong>11. ENTIRE AGREEMENT</strong></p>
+<p>This Agreement represents the entire understanding between you and us, supersedes all prior negotiations, understandings, or agreements, and is binding upon both parties.</p>
+<p><strong>12. DISPUTE RESOLUTION</strong></p>
+<p>Any disputes arising from this Agreement will be resolved through arbitration in accordance with the rules of the American Arbitration Association (&quot;AAA&quot;) then in effect. The arbitration will take place in Salt Lake City, Utah, USA. Judgment on any award rendered by the arbitrator may be entered in any court having jurisdiction over the parties.</p>
+<p><strong>By using Tiny Llama, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement.</strong></p>
+
+</body>
+</html>
