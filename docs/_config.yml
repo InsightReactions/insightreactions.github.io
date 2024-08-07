@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   At InsightReactions, we empower individuals and families to unlock the full 
   potential of artificial intelligence in their daily lives, while prioritizing trust, transparency, and privacy. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://tinyllama.insightreactions.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://insightreactions.com" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 theme: minima
 plugins:
